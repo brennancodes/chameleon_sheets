@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import API from '../../../utils/API';
 import { ExportToCsv } from 'export-to-csv';
 import 'moment-timezone';
+// import router from "../../../../../routes/api/user";
 
 function HistoryCard(props) {
 
@@ -257,7 +258,7 @@ const options = {
   decimalSeparator: '.',
   showLabels: true,
   showTitle: true,
-  title: today,
+  title: "Data Collected on " + today,
   useTextFile: false,
   useBom: true,
   useKeysAsHeaders: true,
@@ -316,12 +317,12 @@ useEffect(() => {
           {dataArray.map((data) => (
           <li className="list-group-item">
             <div className="row">
-              <div className="col-md-3 text-left">{data.date.slice(0,4)}</div>
+              <div className="col-md-4 text-left">{data.date.slice(0,4)}</div>
               <div className="col-md-4 text-left">{(data.dailyAvg) ? (<div>Avg:  {data.dailyAvg.toFixed(2)}</div>):(<div>No Data</div>)}</div>
-              <div className="col-md-3 text-left">{(data.dailyAvg) ? (<div>Max:  {data.dailyHigh}</div>):(<div>No Data</div>)}</div>
-              <div className="col-md-2"><button className="goToDate" onClick={exportCSV} data-date={data.date.slice(0,4)} style={{backgroundColor: "darkslategray", color: "white", borderRadius: "6px", border: ".5px solid white" }} className="CSV" type="submit">
+              <div className="col-md-4 text-left">{(data.dailyAvg) ? (<div style={{color: data.dailyHigh > 3 ? "red" : "inherit"}}>Max:  {data.dailyHigh}</div>):(<div>No Data</div>)}</div>
+              {/* <div className="col-md-2"><button className="goToDate" onClick={goHere} data-date={data.date.slice(0,4)} style={{backgroundColor: "darkslategray", color: "white", borderRadius: "6px", border: ".5px solid white" }} className="CSV" type="submit">
                 <i className="fas fa-arrow-circle-right"></i></button>
-              </div>
+              </div> */}
             </div>
           </li>
           ))}

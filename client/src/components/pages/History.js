@@ -19,16 +19,7 @@ function History() {
     useEffect(() => {
         checkYourself();
       },[])
-    // async function getStudents(){
-    //     let studentPlaceholder = await API.getStudents();
-    //     if(studentPlaceholder && studentPlaceholder.data){
-    //         // console.log("STUDPLACE", studentPlaceholder.data)
-    //         setStudents(studentPlaceholder.data)
-    //     }
-    // }
-    // useEffect(() => {
-    //     getStudents();
-    //   },[])
+      
     return (
     <div>
         {(user) ? (

@@ -25,7 +25,7 @@
   "homepage": "https://github.com/brennancodes/chameleon_sheets#readme",
   "devDependencies": {
     "concurrently": "^4.1.0",
-    "nodemon": "^1.18.7"
+    "nodemon": "^1.19.4"
   },
   "dependencies": {
     "axios": "^0.19.2",
@@ -36,8 +36,9 @@
     "express": "^4.17.1",
     "express-session": "^1.17.0",
     "if-env": "^1.0.4",
-    "mongoose": "^5.9.13",
+    "mongoose": "^5.10.3",
     "morgan": "^1.9.1",
+    "node.js": "0.0.1-security",
     "nodemailer": "^6.4.3",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
