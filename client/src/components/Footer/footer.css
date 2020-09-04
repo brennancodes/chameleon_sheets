@@ -4,7 +4,8 @@
     width: 100%;
     text-align: center;
     border-top: 8px solid white;
-    background-color: darkslategray;
+    background-color: #194d30;
+    opacity: .9;
     color: #ffffff;
     position: fixed;
     left: 0;

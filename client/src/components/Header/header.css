@@ -16,3 +16,9 @@ body {
 .main-header {
     z-index: 99;
 }
+
+.nav-button-container .nav-link {
+    float: right;
+    margin: 0 !important;
+    padding: 5px !important;
+}

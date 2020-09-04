@@ -1,3 +1,8 @@
+/* Welcome text alignment */
+.main-header h2 {
+    margin-left: 20px;
+}
+
 /* 
 This tells us that each table, table header, table row, and table data cell will have no additional spacing.
 All of the elements inside will be exactly the widths that we assign later (plus borders).
@@ -68,10 +73,16 @@ Its width will automatically adjust to the table.
 */
 .table-container {
     background-color: rgb(238,238,238,.9);
+    box-shadow:  0px 0px 12px 1px #999999;
     margin: 0 auto;
     padding: 10px;
     border-radius: 10px;
     position: relative;
+}
+
+.card {
+    box-shadow: 0px 0px 12px 1px #999999;
+    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
 }
 
 /* The flexbox allows our grid to be vertically centered. */
@@ -133,7 +144,7 @@ Its width will automatically adjust to the table.
 }
 
 .nav-student:hover, .nav-student:active {
-    background-color: darkslategray;
+    background-color: #194d30;
 }
 
 .date-tab {
@@ -165,7 +176,7 @@ Its width will automatically adjust to the table.
 }
 
 .nav-tabs:focus, .nav-link:focus {
-    border: 1px solid darkslategray !important;
+    border: 1px solid #194d30 !important;
 }
 
 .add-button:focus {
@@ -226,7 +237,7 @@ margin-top: 10px;
 
 /* MEDIA QUERIES BELOW */
 
-
+/* iPad */
 @media screen and (max-width:1247px){
     td {
         width: 38px;
@@ -240,6 +251,26 @@ margin-top: 10px;
         overflow: hidden;
         padding-top: 5px;
         padding-bottom: 5px;
+    }
+
+    /* ON HANDLING BORDERS */
+table {
+    border-left: none;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    }
+    
+    td, th {
+        border-left: 0px solid black;
+        border-bottom: 1px solid black;
+    }
+    
+    table:first-of-type{
+        border-left: 1px solid black;
+    }
+    
+    table:last-of-type{
+        border-right: 1px solid black;
     }
 
     .nav-tabs {
@@ -320,6 +351,7 @@ margin-top: 10px;
     .main-header {
         max-width: 100vw;
     }
+
     .table-container{
         overflow: scroll;
         white-space: nowrap;

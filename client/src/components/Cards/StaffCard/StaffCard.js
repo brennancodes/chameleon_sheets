@@ -34,7 +34,7 @@ console.log(role)
   return (
 
     <div id = "staffCard" className="card" style={{ width: "18rem", float: "left", border: "1px solid white", marginRight: "40px", marginTop: "50px", opacity: ".95", height: "320px" }}>
-      <div className="card-header" style={{ backgroundColor: "darkslategray", color: "white", fontSize: "28px", }}>
+      <div className="card-header" style={{ backgroundColor: "#194d30", color: "white", fontSize: "28px", }}>
         Add Staff
       </div>
       <form id="staffForm" onSubmit={handleSubmit} type="submit">
@@ -53,7 +53,7 @@ console.log(role)
           </li>
           <li>
             <br />
-            <input style={{ marginTop: "35px", backgroundColor: "darkslategray", color: "white", borderRadius: "6px", border: ".5px solid white" }} type="submit"></input>
+            <input style={{ marginTop: "35px", backgroundColor: "#194d30", color: "white", borderRadius: "6px", border: ".5px solid white" }} type="submit"></input>
           </li>
         </ul>
       </form>

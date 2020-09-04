@@ -45,7 +45,7 @@ function Signup() {
                         <label for="passwordInput" style={{color: "white"}}>Password</label>
                         <input style= {{width: "300px", overflowX: "scroll", margin: "auto"}} onChange={e => setPassword(e.target.value)} className="form-control" id="password-signup" placeholder="Password" type="password"></input>
                     </div>
-                    <input style={{ marginTop: "20px", backgroundColor: "darkslategray", color: "white", borderRadius: "6px", border: ".5px solid white" }} type="submit"></input>
+                    <input style={{ marginTop: "20px", backgroundColor: "#194d30", color: "white", borderRadius: "6px", border: ".5px solid white" }} type="submit"></input>
                     </form>
                 </div>
             </div>

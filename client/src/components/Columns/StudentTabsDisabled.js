@@ -120,7 +120,7 @@ function StudentTabs(props) {
           key={student.id}
           data-studentid={student.id}
           onClick={handleTabClick}
-          style={{ backgroundColor: activeTab === student.id ? "darkslategray" : "#181d27" }}
+          style={{ backgroundColor: activeTab === student.id ? "#194d30" : "#181d27" }}
         >
           <a href="#" className="nav-link">
             {student.firstName}

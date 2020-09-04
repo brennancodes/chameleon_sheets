@@ -16,7 +16,7 @@ function HistoryButton() {
                             height: "50px",
                             fontSize: "24px",
                             backgroundColor: "white",
-                            color: "darkslategray",
+                            color: "#194d30",
                             borderRadius: "6px",
                             border: ".5px solid white",
                             padding: 5

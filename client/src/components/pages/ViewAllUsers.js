@@ -72,10 +72,10 @@ function ViewAll() {
                     <div id="viewAllUsers" className="container container w3-container w3-center w3-animate-opacity">
                         {/* <h1 className="text-center" style={{ color: "white", fontSize: "45px", textDecoration: "none" }}>All Users</h1> */}
                         <div className="row">
-                            <div className="col-md-4" style={{ color: "darkslategray", fontSize: "28px", textDecoration: "underline" }}>
+                            <div className="col-md-4" style={{ color: "#194d30", fontSize: "28px", textDecoration: "underline" }}>
                                 {(teachers && teachers[0]) ? (<div>
                                     <div id="teacherCard" className="card" style={{ width: "18rem", float: "left", border: "1px solid white", marginRight: "40px", marginTop: "30px", opacity: ".95" }}>
-                                        <div className="card-header" style={{ backgroundColor: "darkslategray", color: "white" }}>
+                                        <div className="card-header" style={{ backgroundColor: "#194d30", color: "white" }}>
                                             Teachers
                             </div>
                                         <ul className="list-group list-group-flush" style={{ overflowY: "scroll", maxHeight: "320px", fontSize: "19px" }}>
@@ -88,10 +88,10 @@ function ViewAll() {
                                     </div>
                                 </div>) : (<div>No Teachers</div>)}
                             </div>
-                            <div className="col-md-4" style={{ color: "darkslategray", fontSize: "28px", textDecoration: "underline" }}>
+                            <div className="col-md-4" style={{ color: "#194d30", fontSize: "28px", textDecoration: "underline" }}>
                                 {(students && students[0]) ? (<div>
                                     <div id="teacherCard" className="card" style={{ width: "18rem", float: "left", border: "1px solid white", marginRight: "40px", marginTop: "30px", opacity: ".95" }}>
-                                        <div className="card-header" style={{ backgroundColor: "darkslategray", color: "white" }}>
+                                        <div className="card-header" style={{ backgroundColor: "#194d30", color: "white" }}>
                                             Students
                             </div>
                                         <ul className="list-group list-group-flush" style={{ overflowY: "scroll", maxHeight: "320px", fontSize: "19px" }}>
@@ -104,12 +104,12 @@ function ViewAll() {
                                     </div>
                                 </div>) : (<div>No Students</div>)}
                             </div>
-                            <div className="col-md-4" style={{ color: "darkslategray", fontSize: "28px", textDecoration: "underline" }}>
+                            <div className="col-md-4" style={{ color: "#194d30", fontSize: "28px", textDecoration: "underline" }}>
                                 {(guardians && guardians[0]) ? (<div>
 
                                     <div id="teacherCard" className="card" style={{ width: "18rem", float: "left", border: "1px solid white", marginRight: "40px", marginTop: "30px", opacity: ".95"}}>
 
-                                        <div className="card-header" style={{ backgroundColor: "darkslategray", color: "white" }}>
+                                        <div className="card-header" style={{ backgroundColor: "#194d30", color: "white" }}>
                                             Guardians
                             </div>
                                         <ul className="list-group list-group-flush" style={{ overflowY: "scroll", maxHeight: "320px", fontSize: "19px" }}>
@@ -187,10 +187,10 @@ export default ViewAll;
 //                     <div id="viewAllUsers" className="container container w3-container w3-center w3-animate-opacity">
 //                         {/* <h1 className="text-center" style={{ color: "white", fontSize: "45px", textDecoration: "none" }}>All Users</h1> */}
 //                         <div className="row">
-//                             <div className="col-md-4" style={{ color: "darkslategray", fontSize: "28px", textDecoration: "underline" }}>
+//                             <div className="col-md-4" style={{ color: "#194d30", fontSize: "28px", textDecoration: "underline" }}>
 //                                 {(teachers && teachers[0]) ? (<div>
 //                                     <div id="teacherCard" className="card" style={{ width: "18rem", float: "left", border: "1px solid white", marginRight: "40px", marginTop: "30px", opacity: ".95" }}>
-//                                         <div className="card-header" style={{ backgroundColor: "darkslategray", color: "white" }}>
+//                                         <div className="card-header" style={{ backgroundColor: "#194d30", color: "white" }}>
 //                                             Teachers
 //                             </div>
 //                                         <ul className="list-group list-group-flush" style={{ overflowY: "scroll", maxHeight: "320px", fontSize: "19px" }}>
@@ -203,10 +203,10 @@ export default ViewAll;
 //                                     </div>
 //                                 </div>) : (<div>No Teachers</div>)}
 //                             </div>
-//                             <div className="col-md-4" style={{ color: "darkslategray", fontSize: "28px", textDecoration: "underline" }}>
+//                             <div className="col-md-4" style={{ color: "#194d30", fontSize: "28px", textDecoration: "underline" }}>
 //                                 {(students && students[0]) ? (<div>
 //                                     <div id="teacherCard" className="card" style={{ width: "18rem", float: "left", border: "1px solid white", marginRight: "40px", marginTop: "30px", opacity: ".95" }}>
-//                                         <div className="card-header" style={{ backgroundColor: "darkslategray", color: "white" }}>
+//                                         <div className="card-header" style={{ backgroundColor: "#194d30", color: "white" }}>
 //                                             Students
 //                             </div>
 //                                         <ul className="list-group list-group-flush" style={{ overflowY: "scroll", maxHeight: "320px", fontSize: "19px" }}>
@@ -219,10 +219,10 @@ export default ViewAll;
 //                                     </div>
 //                                 </div>) : (<div>No Students</div>)}
 //                             </div>
-//                             <div className="col-md-4" style={{ color: "darkslategray", fontSize: "28px", textDecoration: "underline" }}>
+//                             <div className="col-md-4" style={{ color: "#194d30", fontSize: "28px", textDecoration: "underline" }}>
 //                                 {(guardians && guardians[0]) ? (<div>
 //                                     <div id="teacherCard" className="card" style={{ width: "18rem", float: "left", border: "1px solid white", marginRight: "40px", marginTop: "30px", opacity: ".95"}}>
-//                                         <div className="card-header" style={{ backgroundColor: "darkslategray", color: "white" }}>
+//                                         <div className="card-header" style={{ backgroundColor: "#194d30", color: "white" }}>
 //                                             Guardians
 //                             </div>
 //                                         <ul className="list-group list-group-flush" style={{ overflowY: "scroll", maxHeight: "320px", fontSize: "19px" }}>
@@ -240,7 +240,7 @@ export default ViewAll;
 //                     <div aria-hidden="true" aria-labelledby="deleteModalLabel" class="modal fade" id="deleteModal" role="dialog" tabindex="-1">
 //                         <div class="modal-dialog" role="document">
 //                             <div class="modal-content">
-//                                 <div class="modal-header" style = {{backgroundColor: "darkslategray"}}>
+//                                 <div class="modal-header" style = {{backgroundColor: "#194d30"}}>
 //                                     <h5 style = {{color: 'white'}} class="modal-title" id="loginModal">Wait!</h5>
 //                                     <button style = {{color: 'white'}} aria-label="Close" class="close" data-dismiss="modal" type="button">
 //                                         <span aria-hidden="true">&times;</span>
@@ -254,7 +254,7 @@ export default ViewAll;
 //                                     </div>
 //                                     <div class="modal-footer">
 //                                         <button className="btn btn-secondary" data-dismiss="modal" type="button">No</button>
-//                                         <button className="btn" type="submit" onClick={result => handleDelete(result.deleteID)} style = {{color: 'white', backgroundColor: "darkslategray", border: '.5 px solid white'}}>Yes</button>
+//                                         <button className="btn" type="submit" onClick={result => handleDelete(result.deleteID)} style = {{color: 'white', backgroundColor: "#194d30", border: '.5 px solid white'}}>Yes</button>
 //                                     </div>
 //                                 </div>
 //                             </div>

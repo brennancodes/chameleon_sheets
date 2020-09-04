@@ -13,7 +13,7 @@ const styles = {
     height: "50px",
     fontSize: "24px",
     backgroundColor: "white",
-    color: "darkslategray",
+    color: "#194d30",
     borderRadius: "6px",
     border: ".5px solid white",
     padding: 5
@@ -29,7 +29,10 @@ function Header() {
   async function checkYourself(){
       let userPlaceholder = await API.getSelf();
       if(userPlaceholder){
-          setName(userPlaceholder.data.first_name)
+        // Make sure first letter is uppercase, then set name
+        var fl = userPlaceholder.data.first_name.charAt(0)
+        var rol = userPlaceholder.data.first_name.slice(1);
+        setName(fl.toUpperCase() + rol)
       }
       if(userPlaceholder && (userPlaceholder.data.role === "Admin")){
         setIsAdmin(true)
@@ -58,39 +61,39 @@ useEffect(() => {
 
   return (
   
-    <nav className="navbar main-header" style={{padding: 10, backgroundColor: "darkslategray", color: "white"}}>
-    {(name) ?(<h2>Welcome {name}!</h2>) : (<h2>Welcome!</h2>)}
-    <ul className="nav">
+    <nav className="navbar main-header" style={{padding: 10, backgroundColor: "#194d30", opacity: ".9", color: "white"}}>
+    {(name) ?(<h2>Welcome {name}!</h2>) : (<h2></h2>)}
+    <ul className="nav navigation-list">
       
     {(user && user.role) ?(<div> {(isAdmin) ? (
-        <div className="row">
-            <li className="nav-link col-md-2">
-                    <AddUserButton />
+        <div className="nav-button-container">
+            <li className="nav-link">
+                <button onClick={handleClick} style={styles.logoutStyle} id="logout">Logout</button>
             </li>
-            <li className="nav-link col-md-2">
+            <li className="nav-link">
+                    <HistoryButton />
+            </li>
+            <li className="nav-link">
+                    <GridButton />
+            </li>
+            <li className="nav-link">
                     <ViewAllUsersButton />
             </li>
-              <li className="nav-link col-md-2">
-                    <GridButton />
-              </li>
-              <li className="nav-link col-md-2">
-                    <HistoryButton />
-              </li>
-              <li className="nav-link col-md-2">
-                <button onClick={handleClick} style={styles.logoutStyle} id="logout">Logout</button>
-            </li>   
+            <li className="nav-link">
+                    <AddUserButton />
+            </li>  
           </div>
             ) : (
           <div className="row">
               <li className="nav-link col-sm-4">
-                    <GridButton />
-              </li>
-              <li className="nav-link col-sm-4">
-                    <HistoryButton />
-                </li>
-              <li className="nav-link col-sm-4">
                 <button onClick={handleClick} style={styles.logoutStyle} id="logout">Logout</button>
-            </li>   
+            </li> 
+            <li className="nav-link col-sm-4">
+                    <HistoryButton />
+            </li> 
+            <li className="nav-link col-sm-4">
+                    <GridButton />
+            </li>  
           </div>
             )} </div>) :(
               <li className="nav-link">

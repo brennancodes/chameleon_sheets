@@ -86,7 +86,7 @@ function GridCol({startTime, index, studentId, sortedLog, date}){
                     <tr>
                         <td 
                             className="fiveRow" 
-                            style={{background: rating === 5 ? "red" : "inherit"}} 
+                            style={{background: rating === 5 ? "#C23B23" : "inherit"}} 
                             data-value={5}
                             data-time={tc + index}
                             index={index}
@@ -96,7 +96,7 @@ function GridCol({startTime, index, studentId, sortedLog, date}){
                     <tr>
                         <td 
                             className="fourRow" 
-                            style={{background: rating === 4 ? "orange" : "inherit"}} 
+                            style={{background: rating === 4 ? "#F39A27" : "inherit"}} 
                             data-value={4}
                             data-time={tc + index}
                             index={index}
@@ -106,7 +106,7 @@ function GridCol({startTime, index, studentId, sortedLog, date}){
                     <tr>
                         <td 
                             className="threeRow" 
-                            style={{background: rating === 3 ? "yellow" : "inherit"}} 
+                            style={{background: rating === 3 ? "#EADA52" : "inherit"}} 
                             data-value={3} 
                             data-time={tc + index}
                             index={index}

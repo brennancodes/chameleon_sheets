@@ -16,7 +16,7 @@ function StudentSearch(props) {
 
         <div className="modal-dialog" role="document">
           <div className="modal-content">
-            <div className="modal-header" style={{ backgroundColor: "darkslategray" }}>
+            <div className="modal-header" style={{ backgroundColor: "#194d30" }}>
               <h5 style={{ color: 'white' }} className="modal-title" id="studentModalHeader">Search for a Student:</h5>
               <button style={{ color: 'white' }} aria-label="Close" className="close" data-dismiss="modal" type="button">
                 <span aria-hidden="true">&times;</span>
@@ -36,10 +36,10 @@ function StudentSearch(props) {
                     placeholder="First or Last Name"
                   />
                 </div>
-                <div className="form-group" style={{ textAlign: "center", fontSize: "20px", color: "darkslategray" }}>
+                <div className="form-group" style={{ textAlign: "center", fontSize: "20px", color: "#194d30" }}>
                   <h4><u>Results</u></h4>
                 </div>
-                <div className="form-group" style={{ textAlign: "center", fontSize: "20px", color: "darkslategray" }}>
+                <div className="form-group" style={{ textAlign: "center", fontSize: "20px", color: "#194d30" }}>
                   {results.length > 0 ? (
                     <ul className="list-group student-selection-ul">
 
@@ -58,7 +58,7 @@ function StudentSearch(props) {
               </div>
               <div className="modal-footer">
                 <button className="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
-                <button style={{ color: 'white', backgroundColor: "darkslategray", border: '.5 px solid white' }} className="btn" type="submit">Add</button>
+                <button style={{ color: 'white', backgroundColor: "#194d30", border: '.5 px solid white' }} className="btn" type="submit">Add</button>
               </div>
             </form>
           </div>

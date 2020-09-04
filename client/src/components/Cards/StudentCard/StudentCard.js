@@ -27,7 +27,7 @@ function StudentCard() {
 
   return (
     <div id = "studentCard" className="card" style={{ width: "18rem", float: "left", border: "1px solid white",marginTop: "50px", opacity: ".95", height: "320px" }}>
-      <div className="card-header" style={{ backgroundColor: "darkslategray", color: "white", fontSize: "28px", }}>
+      <div className="card-header" style={{ backgroundColor: "#194d30", color: "white", fontSize: "28px", }}>
         Add Student
       </div>
       <form id="studentForm" onSubmit={handleSubmit} type="submit">
@@ -48,7 +48,7 @@ function StudentCard() {
             <input onChange={e => setStart(e.target.value)} placeholder="Start">
             </input>
             <br />
-            <input style={{ marginTop: "20px", backgroundColor: "darkslategray", color: "white", borderRadius: "6px", border: ".5px solid white" }} type="submit"></input>
+            <input style={{ marginTop: "20px", backgroundColor: "#194d30", color: "white", borderRadius: "6px", border: ".5px solid white" }} type="submit"></input>
           </li>
         </ul>
 

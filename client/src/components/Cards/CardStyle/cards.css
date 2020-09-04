@@ -7,7 +7,7 @@ body {
 body {
     display: flex;
     flex-direction: column;
-    background-image: url(../../../assets/images/image2.jpg);
+    background-image: url(../../../assets/images/succulent.jpg);
     background-size: cover;
     background-position: center;
 }

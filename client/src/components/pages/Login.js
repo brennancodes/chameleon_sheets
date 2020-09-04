@@ -47,8 +47,9 @@ function Login() {
             <div className="container w3-container w3-center w3-animate-opacity">
                 <div className="jumbotron">
                     <div id="chameleon">
-                        CHAMELEON SHEETS
+                        EVERGREEN
                     </div>
+                    <h5 style={{color: "white", fontFamily:"Barlow Condensed", letterSpacing:".25em", fontStyle:"italic"}}>Data Collection Software</h5>
                     <br/>
                     {(user && user.role) ?(<div> {(isAdmin) ? (
                     <div className="row">
@@ -83,7 +84,7 @@ function Login() {
                                 fontSize: "24px",
                                 marginTop: "20px",
                                 backgroundColor: "white",
-                                color: "darkslategray",
+                                color: "#194d30",
                                 borderRadius: "6px",
                                 border: ".5px solid white",
                                 padding: 5
@@ -94,7 +95,7 @@ function Login() {
                     <div aria-hidden="true" aria-labelledby="loginModalLabel" class="modal fade" id="loginModal" role="dialog" tabindex="-1">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
-                                <div class="modal-header" style = {{backgroundColor: "darkslategray"}}>
+                                <div class="modal-header" style = {{backgroundColor: "#194d30"}}>
                                     <h5 style = {{color: 'white'}} class="modal-title" id="loginModal">Login to Chameleon Sheets:</h5>
                                     <button style = {{color: 'white'}} aria-label="Close" class="close" data-dismiss="modal" type="button">
                                         <span aria-hidden="true">&times;</span>
@@ -113,7 +114,7 @@ function Login() {
                                     </div>
                                     <div class="modal-footer">
                                         <button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
-                                        <button style = {{color: 'white', backgroundColor: "darkslategray", border: '.5 px solid white'}} class = "btn" type="submit">Submit</button>
+                                        <button style = {{color: 'white', backgroundColor: "#194d30", border: '.5 px solid white'}} class = "btn" type="submit">Submit</button>
                                     </div>
                                 </form>
                             </div>

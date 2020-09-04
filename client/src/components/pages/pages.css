@@ -6,7 +6,7 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    background-image: url(../../assets/images/image2.jpg);
+    background-image: url(../../assets/images/succulent.jpg);
     background-size: cover; 
     background-position: center;
     background-attachment: fixed;
@@ -20,6 +20,10 @@ body {
     border-radius: 25px;
 }
 
+.nav-link {
+    margin-right: 0 !important;
+}
+
 h1 {
     text-decoration: underline;
     font-family: 'Barlow Condensed';
@@ -27,7 +31,7 @@ h1 {
 
 .jumbotron{
     border-radius: 25px; 
-    background-color: rgba(47, 79, 79, .9);
+    background-color: rgba(25, 77, 48, .9);
     margin-top: 50px; 
     
 }
