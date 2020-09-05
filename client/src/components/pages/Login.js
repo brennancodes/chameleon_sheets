@@ -96,7 +96,7 @@ function Login() {
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header" style = {{backgroundColor: "#194d30"}}>
-                                    <h5 style = {{color: 'white'}} class="modal-title" id="loginModal">Login to Chameleon Sheets:</h5>
+                                    <h5 style = {{color: 'white'}} class="modal-title" id="loginModal">Login to Evergreen Data:</h5>
                                     <button style = {{color: 'white'}} aria-label="Close" class="close" data-dismiss="modal" type="button">
                                         <span aria-hidden="true">&times;</span>
                                     </button>

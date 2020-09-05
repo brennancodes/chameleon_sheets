@@ -19,7 +19,7 @@ function History() {
     useEffect(() => {
         checkYourself();
       },[])
-      
+
     return (
     <div>
         {(user) ? (
@@ -29,7 +29,7 @@ function History() {
         { students ? (
         <div>
           {students.map(result => (
-            <HistoryCard value={result} />
+            <HistoryCard value={result} key={result.id}/>
                 ))}
         </div>) : (<h2>No Students</h2>)}
         </div>

@@ -32,7 +32,7 @@ function Signup() {
             <div className="container w3-container w3-center w3-animate-opacity">
                 <div className="jumbotron">
                     <form id="login" onSubmit={handleSubmit}>
-                        <h3 style={{color: "white", marginBottom: "20px"}}>Welcome to Chameleon Sheets. Please confirm your key and email and choose a password for access.</h3>
+                        <h3 style={{color: "white", marginBottom: "20px"}}>Welcome to Evergreen Data. Please confirm your key and email and choose a password for access.</h3>
                     <div className="form-group">
                         <label for="key" style={{color: "white", fontSize: "25"}}>Confirm Key</label>
                         <input style= {{width: "300px", overflowX: "scroll", margin: "auto"}} onChange={e => setKey(e.target.value)} className="form-control" id="key-signup" placeholder="Key" type="string"></input>

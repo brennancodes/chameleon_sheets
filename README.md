@@ -1,11 +1,11 @@
-# Chameleon Sheets
+# Evergreen Data Collection Software
 
-Deployed link: (https://chameleon-sheets.herokuapp.com/)
+Deployed link: (https://evergreendata.herokuapp.com/)
 
-Demo Video: (https://youtu.be/2pRWXtuPae4). Please watch our demo video for a brief overview of what our application does!
-- Video script and recording made by Brennan, as well as the background music!
+Demo Video: (https://youtu.be/2pRWXtuPae4). Please watch this demo video for a brief overview of what the application does!
+- Video script and recording made by Brennan, as well as the background music! Note that the app has since undergone a rebranding as of 9/4/2020.
 
-While the application doesn't allow users to freely create accounts and test the app themselves in an effort to protect student information, we would be happy to provide a more technical demo to anyone interested! Please reach out to us at chameleon.sheets@gmail.com!
+While the application doesn't allow users to freely create accounts and test the app themselves in an effort to protect student information, I would be happy to provide a more technical demo to anyone interested! Please reach out to me at brennancodes@gmail.com!
 
 Contributors (GitHub usernames in parentheses):
 
@@ -22,13 +22,13 @@ Contributors (GitHub usernames in parentheses):
 
 ## Introduction and Inspiration
 
-Welcome to Chameleon Sheets!
+Welcome to Evergreen Data!
 
 The idea behind this application came from Brennan, who works with students with disabilities, as he was seeking digitized alternatives to the materials he was using day to day to complete his work.
 
-As a paraprofessional, Brennan and his colleagues use sheets of paper with a grid to record student behavior in 15 minute increments. Student behavior scores range from 1 - 5, five being the best, and one the opposite. Each student had their own sheet of paper, and at the end of the day, paras would compile this data into a digital spreadsheet.
+As a paraprofessional, Brennan and his colleagues use sheets of paper with a grid to record student behavior in 15 minute increments. Student behavior scores range from 1 - 5, five being the worst, and one being the best - think of it more as an "intensity of behavior" meter. Each student had their own sheet of paper, and at the end of the day, paras would compile this data into a digital spreadsheet.
 
-Brennan realized his school was going through tons of paper, and creating a digital version of this would not only save his school paper, but streamline and simplify the entire process.
+Brennan realized his school was going through tons of paper, tons of time, and risking errors with manual transcription. Creating a digital version of this would not only save his valuable resources, but streamline and simplify the entire process.
 
 ## Application Use
 
@@ -62,7 +62,7 @@ On the history page, all students in the database are displayed in cards, with a
 
 - We would like to make the app a progressive web application (PWA). That way if a device or school loses internet connection, use of the app can continue.
 
-- Fully customizable columns and rows so the data sheet can be used in any context, hence the name "chameleon sheets," so the app can be adapated to tracking anything, like company inventory, etc.
+- Fully customizable columns and rows so the data sheet can be used in any context, so the app can be adapated to tracking more things.
 
 - User customization options like background theme, colors, a profile picture, etc.
 Customization options by school or company.

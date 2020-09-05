@@ -22,8 +22,8 @@ router.route("/")
     var transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: 'chameleon.sheets@gmail.com',
-        pass: 'ChameleonSheets11$'
+        user: 'evergreenDCS@gmail.com',
+        pass: 'CedarSun2020!'
       }
     });
 
@@ -44,15 +44,15 @@ router.route("/")
 function emailOptions(firstName, lastName, email, role, student, key) {
   console.log("from email options " + firstName + role)
   let emailOptions = {}
-  emailOptions.from = 'chameleon.sheets@gmail.com';
+  emailOptions.from = 'evergreenDCS@gmail.com';
   emailOptions.to = email;
-  emailOptions.subject = 'Sign up with Chameleon Sheets';
+  emailOptions.subject = 'Sign up with Evergreen Data';
   if (role === "Teacher") {
-    emailOptions.html = `<p> Hello ${firstName} ${lastName}! <br> Welcome to the team! Please click this <a href= "https://chameleon-sheets.herokuapp.com/signup"> link </a> to complete your profile! </p>  <p>You'll need this unique key:  ${key}</p> <p> Thanks, <br> your friends at Chameleon Cooperative </p>`;
+    emailOptions.html = `<p> Hello ${firstName} ${lastName}! <br> Welcome to the team! Please click this <a href= "https://evergreendata.herokuapp.com/signup">link</a> to complete your profile! </p>  <p>You'll need this unique key:  ${key}</p> <p> Thanks, <br> your friends at Evergreen Cooperative </p>`;
     
   }
   else {
-    emailOptions.html = `<p> Hello ${firstName} ${lastName}! <br> We're delighted to have your student at our school! Please click this <a href= "https://chameleon-sheets.herokuapp.com/signup"> link </a> to complete your profile! </p> <p>You'll need this unique key:  ${key}</p> <p> Thanks, <br> your friends at Chameleon Cooperative </p>`;
+    emailOptions.html = `<p> Hello ${firstName} ${lastName}! <br> We're delighted to have your student at our school! Please click this <a href= "https://evergreendata.herokuapp.com/signup">link</a> to complete your profile! </p> <p>You'll need this unique key:  ${key}</p> <p> Thanks, <br> your friends at Evergreen </p>`;
   
   }
   return emailOptions

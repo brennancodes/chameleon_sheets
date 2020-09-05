@@ -16,8 +16,6 @@ function GridCol({startTime, index, studentId, sortedLog, date}){
     let tc = "tc";
 
     const [rating, setRating] = useState(6);
-    const [activeDate, setActiveDate] = useState(today);
-    const [isLoading, setIsLoading] = useState(false);
     const [cellState, setCellState] = useState(0);
     
     // let user = API.getSelf();

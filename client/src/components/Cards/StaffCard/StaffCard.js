@@ -11,7 +11,7 @@ function StaffCard() {
   const [firstName, setFirstName] = useState();
   const [email, setEmail] = useState();
   const [lastName, setLastName] = useState();
-  const [role, setRole] = useState("Teacher");
+  const role = "Teacher";
 
   const handleSubmit = e => {
     e.preventDefault();

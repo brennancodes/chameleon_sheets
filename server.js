@@ -10,6 +10,8 @@ var passport = require("./config/passport");
 const app = express();
 const port = process.env.PORT || 3001;
 
+// mongodb+srv://brennancodes:Shurefire7@cluster0.clj0s.mongodb.net/chameleondb?retryWrites=true&w=majority
+
 app.use(logger('dev'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());

@@ -299,13 +299,13 @@ useEffect(() => {
 
   return (
     <div className="card" style={{ width: "18rem", float: "left", border: "1px solid white", marginLeft: "50px", marginBottom: "50px", opacity: ".95" }}>
-      <div className="card-header" style={{ backgroundColor: "#194d30", color: "white" }}>
+      <div className="card-header" style={{ backgroundColor: "#267347", color: "white" }}>
         <div className="row">
-          <div className="col-md-2"><button className="analysisCSV" title="Export Hourly Breakdown" onClick={exportAnalysis} style={{backgroundColor: "#194d30", color: "white", borderRadius: "6px", border: ".5px solid white" }}>
+          <div className="col-md-2"><button className="analysisCSV" title="Export Hourly Breakdown" onClick={exportAnalysis} style={{backgroundColor: "#267347", color: "white", borderRadius: "6px", border: ".5px solid white" }}>
             <i className="fas fa-chart-area"></i></button>
           </div>
           <div className="col-md-8">{(student && student.id) ? (<div>{student.firstName} {student.lastName}</div>):(<div>No Name</div>)}</div>
-          <div className="col-md-2"><button className="exportCSVButton" title="Download CSV" onClick={exportCSV} style={{backgroundColor: "#194d30", color: "white", borderRadius: "6px", border: ".5px solid white"}}>
+          <div className="col-md-2"><button className="exportCSVButton" title="Download CSV" onClick={exportCSV} style={{backgroundColor: "#267347", color: "white", borderRadius: "6px", border: ".5px solid white"}}>
             <i className="fas fa-cloud-download-alt"></i></button>
           </div>
         </div>
@@ -315,12 +315,12 @@ useEffect(() => {
       <form>
         <ul className="list-group list-group-flush">
           {dataArray.map((data) => (
-          <li className="list-group-item">
+          <li className="list-group-item" key={data.date}>
             <div className="row">
               <div className="col-md-4 text-left">{data.date.slice(0,4)}</div>
               <div className="col-md-4 text-left">{(data.dailyAvg) ? (<div>Avg:  {data.dailyAvg.toFixed(2)}</div>):(<div>No Data</div>)}</div>
               <div className="col-md-4 text-left">{(data.dailyAvg) ? (<div style={{color: data.dailyHigh > 3 ? "red" : "inherit"}}>Max:  {data.dailyHigh}</div>):(<div>No Data</div>)}</div>
-              {/* <div className="col-md-2"><button className="goToDate" onClick={goHere} data-date={data.date.slice(0,4)} style={{backgroundColor: "#194d30", color: "white", borderRadius: "6px", border: ".5px solid white" }} className="CSV" type="submit">
+              {/* <div className="col-md-2"><button className="goToDate" onClick={goHere} data-date={data.date.slice(0,4)} style={{backgroundColor: "#267347", color: "white", borderRadius: "6px", border: ".5px solid white" }} className="CSV" type="submit">
                 <i className="fas fa-arrow-circle-right"></i></button>
               </div> */}
             </div>

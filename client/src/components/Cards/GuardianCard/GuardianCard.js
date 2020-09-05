@@ -10,9 +10,9 @@ function GuardianCard() {
   const [firstName, setFirstname] = useState();
   const [email, setEmail] = useState();
   const [lastName, setLastName] = useState();
-  const [role, setRole] = useState("Guardian");
   const [student, setStudent] = useState();
   const [studentData, setStudentData] = useState();
+  const role = "Guardian";
 
   async function getStudents(){
     let studentPlaceholder = await API.getStudents();
@@ -27,7 +27,7 @@ function studentSelect (e) {
   // console.log(studentData);
   let filtered = studentData.filter(student => {
     let name = student.name.firstName + " " + student.name.lastName
-    return name == e.currentTarget.value
+    return name === e.currentTarget.value
   })
   // console.log(filtered)
   let studentDataSave = {
