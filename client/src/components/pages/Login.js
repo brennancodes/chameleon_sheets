@@ -50,7 +50,7 @@ function Login() {
                         EVERGREEN
                     </div>
                     <h5 style={{color: "white", fontFamily:"Barlow Condensed", letterSpacing:".25em", fontStyle:"italic"}}>Data Collection Software</h5>
-                    <br/>
+                    <br/><br/>
                     {(user && user.role) ?(<div> {(isAdmin) ? (
                     <div className="row">
                         <div className="col-md-3">
