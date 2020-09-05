@@ -10,7 +10,15 @@ var passport = require("./config/passport");
 const app = express();
 const port = process.env.PORT || 3001;
 
-// mongodb+srv://brennancodes:Shurefire7@cluster0.clj0s.mongodb.net/chameleondb?retryWrites=true&w=majority
+
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://brennancodes:<password>@cluster0.clj0s.mongodb.net/<dbname>?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
 
 app.use(logger('dev'));
 app.use(express.urlencoded({ extended: true }));

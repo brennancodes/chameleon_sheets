@@ -15,7 +15,6 @@
         "logging": false
     },
     "production": {
-        "use_env_variable": "MLAB_URL",
         "dialect": "mongoose"
     }
 }
