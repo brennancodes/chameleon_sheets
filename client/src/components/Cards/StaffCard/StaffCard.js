@@ -38,7 +38,7 @@ console.log(role)
         Add Staff
       </div>
       <form id="staffForm" onSubmit={handleSubmit} type="submit">
-        <ul className="list-group list-group-flush">
+        <ul className="list-group list-group-flush" style={{listStyleType: "none"}}>
           <li className="list-group-item">
             <input onChange={e => setFirstName(e.target.value)} id="staffFirstName" required="true" placeholder="First Name">
             </input>
