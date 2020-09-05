@@ -268,15 +268,15 @@ const options = {
 const analysis = {
   fieldSeparator: ',',
   quoteStrings: '"',
-  filename: student.firstName + "Hourly Analysis",
+  filename: student.firstName + "Analysis",
   decimalSeparator: '.',
   showLabels: true,
   showTitle: true,
-  title: today,
+  title: "Data requested on " + today,
   useTextFile: false,
   useBom: true,
-  useKeysAsHeaders: true,
-  // headers: ['Column 1', 'Column 2', etc...] <-- Won't work with useKeysAsHeaders present!
+  useKeysAsHeaders: false,
+  headers: ['Student', '0800', '0815', '0830', '0845', '0900', '0915', '0930', '0945', '1000', '1015', '1030', '1045', '1100', '1115', '1130', '1145', '1200', '1215', '1230', '1245', '1300', '1315', '1330', '1345']
 };
 
 const exportCSV = (e) => {
