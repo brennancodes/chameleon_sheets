@@ -96,6 +96,7 @@ useEffect(() => {
             <label for="students">Select a student: </label>
             {(studentData && studentData[0]) ? (
             <select id="students" onChange={studentSelect} style={{ backgroundColor: "white", color: "#194d30", borderRadius: "6px", border: ".5px solid #194d30", marginLeft: "5px" }}>
+              <option>- - Select - -</option>
               {studentData.map(result => (
                 <option id={result._id}>
                   {result.name.firstName} {result.name.lastName}
