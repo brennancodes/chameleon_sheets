@@ -42,24 +42,35 @@ useEffect(() => {
     getStudents();
   },[])
 
+  useEffect(() => {
+    console.log("STUDNET DATA: " + student)
+    // setStudent(studentData[0]._id)
+    // console.log("CURRENT STUDENT: " + student)
+  },[student])
+
   const handleSubmit = e => {
 
     e.preventDefault();
-    toast.notify("Guardian added successfully!");
-    var key = keyGen.generate();
-    API.email({ firstName, lastName, email, student, role, key });
-
-    API.saveUser({
-      role: role,
-      email: email,
-      first_name: firstName,
-      last_name: lastName,
-      students: [student],
-      key: key
-    });
-
-    // console.log(student);
-    document.getElementById("guardianForm").reset();
+    if (student) {
+      toast.notify("Guardian added successfully!");
+      var key = keyGen.generate();
+      API.email({ firstName, lastName, email, student, role, key });
+  
+      API.saveUser({
+        role: role,
+        email: email,
+        first_name: firstName,
+        last_name: lastName,
+        students: [student],
+        key: key
+      });
+  
+      // console.log(student);
+      document.getElementById("guardianForm").reset();
+    }
+    else {
+      toast.notify("Please select a student from the dropdown menu.")
+    }
   }
 
   return (
