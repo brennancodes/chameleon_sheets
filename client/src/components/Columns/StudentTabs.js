@@ -47,12 +47,15 @@ function StudentTabs(props) {
       try {
         API.addStudentToTeacher(obj)
       } catch (err) { console.log(err) }
+      setActiveStudent("");
+      setActiveTab("");
     }
     else {
       setCurrentStudents(currentStudents.filter(item => item.id !== event.currentTarget.dataset.studentid));
-      console.log(event.currentTarget.dataset.studentid + " removed from user collection.")
-      console.log("Current Students: ", currentStudents)
+      setActiveStudent(currentStudents[0]);
+      setActiveTab(currentStudents[0]);
     }
+    window.location.reload(false);
   }
 
   useEffect(() => {
