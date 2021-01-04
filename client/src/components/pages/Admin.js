@@ -5,6 +5,7 @@ import StudentCard from '../Cards/StudentCard/StudentCard';
 import GuardianCard from '../Cards/GuardianCard/GuardianCard';
 import Header from "../Header/Header";
 import API from '../../utils/API';
+import AddGoalCard from "../Cards/AddGoalCard/AddGoalCard";
 
 function Admin() {
     const [isAdmin, setIsAdmin] = useState();
@@ -29,6 +30,7 @@ function Admin() {
                         <StaffCard />
                         <StudentCard />
                         <GuardianCard />
+                        <AddGoalCard />
                     </div>
                     </div>) : (<div className="container">
                         <div className = "jumbotron">

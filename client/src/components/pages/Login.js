@@ -2,18 +2,33 @@ import React, { useState, useEffect } from "react";
 import './pages.css';
 import API from '../../utils/API';
 import { Redirect } from "react-router-dom";
-import AddUserButton from "../Buttons/AddUserButton/AddUser"
+import AddUserButton from "../Buttons/AdminButton/Admin"
 import GridButton from "../Buttons/GridButton/GridButton"
 import HistoryButton from "../Buttons/HistoryButton/HistoryButton"
 import ViewAllUsersButton from "../Buttons/ViewAllUsersButton/ViewAllUsersButton"
 import toast from 'toasted-notes' 
 import 'toasted-notes/src/styles.css';
+import GoalsButton from "../Buttons/GoalsButton/GoalsButton";
+
+const styles = {
+    logoutStyle: {
+      width: "100px",
+      height: "50px",
+      fontSize: "24px",
+      backgroundColor: "white",
+      color: "#194d30",
+      borderRadius: "6px",
+      border: ".5px solid white",
+      padding: 5
+    }
+  };
 
 function Login() {
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
     const [user, setUser] = useState();
     const [isAdmin, setIsAdmin] = useState();
+    const [loggedOut, setLoggedOut] = useState();
     let freshLog = false
     async function checkYourself(){
         let userPlaceholder = await API.getSelf();
@@ -41,6 +56,15 @@ function Login() {
         }).catch(() => toast.notify ("Invalid login credentials. Please try again."))
         checkYourself();
     }
+      
+        if (loggedOut) {
+            return <Redirect to={"/"} />
+          }
+          
+        const handleLogout = async e => {
+            let logout = await API.logout()
+            setLoggedOut(true)
+        }
     
     return (
         <div>
@@ -53,26 +77,38 @@ function Login() {
                     <br/><br/>
                     {(user && user.role) ?(<div> {(isAdmin) ? (
                     <div className="row">
-                        <div className="col-md-3">
+                        <div className="col-md-2">
                             <AddUserButton />
                         </div>
-                        <div className="col-md-3">
+                        <div className="col-md-2">
                             <ViewAllUsersButton />
                         </div>
-                        <div className="col-md-3">
+                        <div className="col-md-2">
                             <GridButton />
                         </div>
-                        <div className="col-md-3">
+                        <div className="col-md-2">
+                            <GoalsButton />
+                        </div>
+                        <div className="col-md-2">
                             <HistoryButton />
+                        </div>
+                        <div className="col-md-2">
+                            <button onClick={handleLogout} style={styles.logoutStyle} id="logout">Logout</button>
                         </div>
                     </div>
                     ) : (
                     <div className="row">
-                        <div className="col-md-6">
+                        <div className="col-md-3">
                             <GridButton />
                         </div>
-                        <div className="col-md-6">
+                        <div className="col-md-3">
+                            <GoalsButton />
+                        </div>
+                        <div className="col-md-3">
                             <HistoryButton />
+                        </div>
+                        <div className="col-md-3">
+                            <button onClick={handleLogout} style={styles.logoutStyle} id="logout">Logout</button>
                         </div>
                     </div>
                     )} </div>) :(

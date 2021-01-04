@@ -29,7 +29,7 @@ function DateTab(props){
         let slicedYear = tempDate.slice(0,4)
         let slicedMonth = tempDate.slice(5,7)
         let slicedDay = tempDate.slice(8,10)
-        let newConstructedDate = slicedMonth + slicedDay + slicedYear
+        let newConstructedDate = slicedYear + slicedMonth + slicedDay
         if (canUpdate === true) {
             props.setDate(newConstructedDate);
             setDisplayedDate(slicedMonth + "/" + slicedDay)

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import GridCol from "./GridCol"
 import GridColGuardian from "./GridColGuardian"
 import TabWrapper from "./TabWrapper";
+import GoalPanel from "./GoalPanel";
 import 'moment-timezone';
 import './style.css'
 import API from '../../utils/API';
@@ -12,13 +13,14 @@ function Wrapper() {
     var dd = String(today.getDate()).padStart(2, '0');
     var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
     var yyyy = today.getFullYear();
-    today = mm + dd + yyyy;
+    today = yyyy + mm + dd;
     
     const [studentId, setStudentId] = useState();
     const [date, setDate] = useState(today);
     const [user, setUser] = useState();
     const [isGuardian, setIsGuardian] = useState();
     const [sortedLog, setSortedLog] = useState([]);
+    const [refresh, setRefresh] = useState(false)
 
     async function checkYourself() {
         let userPlaceholder = await API.getSelf();
@@ -44,6 +46,16 @@ function Wrapper() {
     const dateFunction = (date) => {
         setDate(date)
         console.log("DATE UPDATED: ", date)
+    }
+
+    const handleRefresh = () => {
+        if(refresh === true) {
+            setRefresh(false)
+        }
+        else if (refresh === false) {
+            setRefresh(true)
+        }
+        else {console.log("Dude, you broke me.")}
     }
 
     function compare(a, b) {
@@ -72,8 +84,8 @@ function Wrapper() {
             }
             fetchLogs();
             } else { }
-        
-        }, [studentId, date])
+            console.log(refresh + "Reffffff")
+        }, [studentId, date, refresh])
 
     for (var i = 1; i < columns + 1; i++) {
         columnArray.push("column-" + [i]);
@@ -103,7 +115,12 @@ function Wrapper() {
                             sortedLog={sortedLog}
                             date={date}
                         ></GridCol>
-                    ))} </div>)}</div>) : (<div className="container">
+                    ))} <GoalPanel
+                            studentId={studentId}
+                            date={date}
+                            handleRefresh={handleRefresh}
+                            refresh={refresh}
+                        ></GoalPanel> </div>)}</div>) : (<div className="container">
                         <div className="jumbotron">
                             <div className="text-center" style={{ color: "white", fontSize: "42px", marginBottom: "25px" }}>You must be logged in to view this page</div>
                         </div>

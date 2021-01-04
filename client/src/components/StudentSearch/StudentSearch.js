@@ -12,7 +12,7 @@ function StudentSearch(props) {
         +
           </button>
 
-      <div aria-hidden="true" aria-labelledby="studentModalLabel" className="modal" id="studentModal" role="dialog" tabindex="-1">
+      <div aria-hidden="true" aria-labelledby="studentModalLabel" className="modal fade" id="studentModal" role="dialog" tabindex="-1">
 
         <div className="modal-dialog" role="document">
           <div className="modal-content">

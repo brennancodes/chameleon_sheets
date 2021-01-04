@@ -148,7 +148,7 @@ let fives = 0;
         for (let j = 0; j < logPlaceholder.data[i].scores.length; j++){
           if((logPlaceholder.data[i].scores[j].score > 0) && (logPlaceholder.data[i].scores[j].score <6)){ //If scores are valid, place the corresponding value in the appropriate time slot
             if(logPlaceholder.data[i].scores[j].time === 0){ y0 = (logPlaceholder.data[i].scores[j].score) }
-            else if(logPlaceholder.data[i].scores[j].time === 1){ y1 = (logPlaceholder.data[i].scores[j].score); console.log(y1) }
+            else if(logPlaceholder.data[i].scores[j].time === 1){ y1 = (logPlaceholder.data[i].scores[j].score); }
             else if(logPlaceholder.data[i].scores[j].time === 2){ y2 = (logPlaceholder.data[i].scores[j].score) }
             else if(logPlaceholder.data[i].scores[j].time === 3){ y3 = (logPlaceholder.data[i].scores[j].score) }
             else if(logPlaceholder.data[i].scores[j].time === 4){ y4 = (logPlaceholder.data[i].scores[j].score) }
@@ -257,6 +257,9 @@ let fives = 0;
         indexedYear.data.sort((a, b) => parseFloat(b.date) - parseFloat(a.date));
         setYearlyArray(yearlyArray => [...yearlyArray, indexedYear.data[q]])
       }
+      for (var ii = 0; ii < indexedYear.data.length; ii++){
+        indexedYear.data[ii].date = indexedYear.data[ii].date.slice(4,6) + "/" + indexedYear.data[ii].date.slice(6,8) + "/" + indexedYear.data[ii].date.slice(0,4)
+      }
 
       var indexedAnalysis = new IndexedAnalysis('date');
       for (var i = 0; i < logPlaceholder.data.length; i++){
@@ -358,11 +361,11 @@ let fives = 0;
               else if(logPlaceholder.data[i].scores[j].score === 3){ threes++; if(hiScore < 3){hiScore=3}; }
               else if(logPlaceholder.data[i].scores[j].score === 4){ fours++; if(hiScore < 4){hiScore=4}; }
               else if(logPlaceholder.data[i].scores[j].score === 5){ fives++; if(hiScore < 5){hiScore=5}; }
-              percentage1 = ((ones/count)*100); 
-              percentage2 = ((twos/count)*100); 
-              percentage3 = ((threes/count)*100); 
-              percentage4 = ((fours/count)*100); 
-              percentage5 = ((fives/count)*100); 
+              percentage1 = ((ones/count)*100).toFixed(2); 
+              percentage2 = ((twos/count)*100).toFixed(2); 
+              percentage3 = ((threes/count)*100).toFixed(2); 
+              percentage4 = ((fours/count)*100).toFixed(2); 
+              percentage5 = ((fives/count)*100).toFixed(2); 
             }
         }
         indexedArray.addOrReplace({
@@ -394,6 +397,9 @@ let fives = 0;
       for (var q = 0; q < indexedArray.data.length; q++){
         indexedArray.data.sort((a, b) => parseFloat(b.date) - parseFloat(a.date));
         setDataArray(dataArray => [...dataArray, indexedArray.data[q]])
+      }
+      for (var ii = 0; ii < indexedArray.data.length; ii++){
+        indexedArray.data[ii].date = indexedArray.data[ii].date.slice(4,6) + "/" + indexedArray.data[ii].date.slice(6,8) + "/" + indexedArray.data[ii].date.slice(0,4)
       }
     }
   }
@@ -503,7 +509,7 @@ useEffect(() => {
           {dataArray.map((data) => (
           <li className="list-group-item" key={data.date}>
             <div className="row">
-              <div className="col-md-4 text-left">{data.date.slice(0,2)+"/"+data.date.slice(2,4)}</div>
+              <div className="col-md-4 text-left">{data.date.slice(4,6) + "/" + data.date.slice(6,8)}</div>
               <div className="col-md-4 text-left">{(data.dailyAvg) ? (<div>Avg:  {data.dailyAvg.toFixed(2)}</div>):(<div>No Data</div>)}</div>
               <div className="col-md-4 text-left">{(data.dailyAvg) ? (<div style={{color: data.dailyHigh > 3 ? "red" : "inherit"}}>Max:  {data.dailyHigh}</div>):(<div>No Data</div>)}</div>
               {/* <div className="col-md-2"><button className="goToDate" onClick={goHere} data-date={data.date.slice(0,4)} style={{backgroundColor: "#267347", color: "white", borderRadius: "6px", border: ".5px solid white" }} className="CSV" type="submit">

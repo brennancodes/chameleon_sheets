@@ -18,7 +18,7 @@ function StudentTabs(props) {
   var dd = String(today.getDate()).padStart(2, '0');
   var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
   var yyyy = today.getFullYear();
-  today = mm + dd + yyyy;
+  today = yyyy + mm + dd;
 
   function handleInputChange(event) {
     const value = event.target.value;
@@ -130,7 +130,7 @@ function StudentTabs(props) {
     <ul className="nav nav-tabs">
       {currentStudents.map(student => (
         <li
-          className="nav-item nav-student"
+          className={ activeTab === student.id ? "nav-item nav-student active-student-tab" : "nav-item nav-student inactive-student-tab"}
           key={student.id}
           data-studentid={student.id}
           onClick={handleTabClick}
@@ -139,7 +139,7 @@ function StudentTabs(props) {
           <a href="#" className="nav-link">
             {student.firstName}
           </a>
-          <i class="fas fa-times removeStudent" onClick={removeStudentTab} data-studentid={student.id}></i>
+          <i class="fas fa-times removeStudent" onClick={removeStudentTab} data-studentid={student.id} style={{ display: activeTab === student.id ? "initial" : "none"}}></i>
         </li>
       ))}
 

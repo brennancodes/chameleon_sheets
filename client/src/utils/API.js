@@ -61,6 +61,11 @@ export default {
   createLog: (data) => {
     return axios.post("/api/dayLog/", data)
   },
+  //Adds a goal to the student
+  addStudentGoal: (data) => {
+    console.log("ASG DATA " + JSON.stringify(data) + " ASG DATA")
+    return axios.post("/api/student/addStudentGoal", data)
+  },
   //Adds students the sser currently monitors 
   addStudentToTeacher: (data) => {
     return axios.post("/api/student/teacherAddStudent", data)

@@ -12,6 +12,36 @@ body {
     background-position: center;
 }
 
+/* Prevents the page from scrolling to the top when a modal is opened. */
+body.modal-open {
+    overflow: visible !important;
+}
+
+/* Allows Modal Title to be centered */
+.goalTypeClose {
+    position: absolute;
+    top: 0;
+    color: white;
+}
+
+.goalTypeModalHeader {
+    display: inline;
+}
+
+.goalTypeModalBody {
+    text-align: justify;
+}
+
+.fa-info-circle {
+    color: gray;
+    font-size: 14px;
+}
+
+.fa-info-circle:hover {
+    cursor: pointer;
+}
+/* End Modal design */
+
 .container {
     flex: 1 0 auto;
     width: 960px;
@@ -41,6 +71,15 @@ body {
 
 .card {
     height: 320px;
+}
+
+.add-goal-card-col {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.add-goal-card {
+    height: initial;
 }
 @media (max-width: 992px) {
     #guardianCard {

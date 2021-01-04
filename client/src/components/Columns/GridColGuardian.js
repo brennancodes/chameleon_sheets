@@ -11,7 +11,7 @@ function GridCol({startTime, index, studentId, sortedLog, date}){
     var dd = String(today.getDate()).padStart(2, '0');
     var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
     var yyyy = today.getFullYear();
-    today = mm + dd + yyyy;
+    today = yyyy + mm + dd;
     let time = <Moment parse="HH:mm" format="h:mm" add={{ minutes: (15*index) }}>{startTime}</Moment>
     let tc = "tc";
 

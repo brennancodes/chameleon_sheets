@@ -1,13 +1,13 @@
 import React from "react";
 import {Link} from "react-router-dom";
 
-function HistoryButton() {
+function AdminButton() {
 
     return (
         <div>
-            <Link to="/history"
+            <Link to="/admin"
                 className={
-                    window.location.pathname === "/history"
+                    window.location.pathname === "/admin"
             }>
                 <button type="button"
                     style={
@@ -22,11 +22,11 @@ function HistoryButton() {
                             padding: 5
                         }
                 }>
-                    History
+                    Admin
                 </button>
             </Link>
         </div>
     )
 }
 
-export default HistoryButton;
+export default AdminButton;

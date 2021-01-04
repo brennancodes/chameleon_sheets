@@ -1,13 +1,13 @@
 import React from "react";
 import {Link} from "react-router-dom";
 
-function AddUserButton() {
+function GoalsButton() {
 
     return (
         <div>
-            <Link to="/admin"
+            <Link to="/goals"
                 className={
-                    window.location.pathname === "/admin"
+                    window.location.pathname === "/goals"
             }>
                 <button type="button"
                     style={
@@ -22,11 +22,11 @@ function AddUserButton() {
                             padding: 5
                         }
                 }>
-                    Add Users
+                    Goals
                 </button>
             </Link>
         </div>
     )
 }
 
-export default AddUserButton;
+export default GoalsButton;

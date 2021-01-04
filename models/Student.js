@@ -12,6 +12,20 @@ const studentSchema = new Schema({
             require: "Student must have a last name"
         }
     },
+    goals: [{
+        label: {
+            type: String
+        },
+        description: {
+            type: String
+        },
+        type: { //Binary, Raw Percent, Successes/Opportunities, Notes
+            type: String
+        },
+        options: { //Used by Binary and Successes/Opportunities
+            type: Array
+        }
+    }],
     classRoom: {
         type: String
     },

@@ -40,6 +40,7 @@ router.route("/byID/:id")
         // console.log(req.params.id)
         if (req.params.id) {
             db.Student.find({ _id: req.params.id }).then(result => {
+                console.log("student api 44")
                 res.json(result);
             }).catch(err => {
                 res.json(err);
@@ -49,6 +50,31 @@ router.route("/byID/:id")
             res.end();
         }
     });
+
+router.route("/addStudentGoal")
+.post((req, res) => {
+    console.log(req.body.newGoal.studentId + "line 56 student api");
+    console.log(JSON.stringify(req.body) + " ASG goals body")
+    db.Student.findByIdAndUpdate({ _id: req.body.newGoal.studentId }, { $push: {goals: req.body.newGoal.goal} }
+    ).then(results => {
+        // console.log(results)
+        res.json(results);
+    }).catch(err => {
+        res.json(err);
+        console.log(err);
+    });
+});
+
+//IS THIS ROUTE EVEN NECESSARY IF WE ALREADY HAVE A GET STUDENT BY ID ROUTE? We just have different information to parse now.
+// router.route("/getStudentGoals")
+// .post((req, res) => {
+//     db.Student.findById({_id: req.body.id}).then(results => {
+//             res.json(results);
+//         }).catch(err => {
+//             res.json(err);
+//             console.log(err);
+//         });
+// });
 
 router.route("/teacherAddStudent")
     .post((req, res) => {

@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import "./header.css";
 import API from '../../utils/API';
 import { Redirect } from "react-router-dom";
-import AddUserButton from "../Buttons/AddUserButton/AddUser"
+import AddUserButton from "../Buttons/AdminButton/Admin"
 import GridButton from "../Buttons/GridButton/GridButton"
 import HistoryButton from "../Buttons/HistoryButton/HistoryButton"
 import ViewAllUsersButton from "../Buttons/ViewAllUsersButton/ViewAllUsersButton"
+import GoalsButton from "../Buttons/GoalsButton/GoalsButton";
 
 const styles = {
   logoutStyle: {
@@ -54,7 +55,7 @@ useEffect(() => {
       return <Redirect to={"/"} />
     }
     
-  const handleClick = async e => {
+  const handleLogout = async e => {
       let logout = await API.logout()
       setLoggedOut(true)
   }
@@ -68,11 +69,14 @@ useEffect(() => {
     {(user && user.role) ?(<div> {(isAdmin) ? (
         <div className="nav-button-container">
             <li className="nav-link">
-                <button onClick={handleClick} style={styles.logoutStyle} id="logout">Logout</button>
+                <button onClick={handleLogout} style={styles.logoutStyle} id="logout">Logout</button>
             </li>
             <li className="nav-link">
                     <HistoryButton />
             </li>
+            {/* <li className="nav-link">
+                    <GoalsButton />
+            </li> */}
             <li className="nav-link">
                     <GridButton />
             </li>
@@ -86,18 +90,21 @@ useEffect(() => {
             ) : (
           <div className="nav-button-container">
               <li className="nav-link">
-                <button onClick={handleClick} style={styles.logoutStyle} id="logout">Logout</button>
+                <button onClick={handleLogout} style={styles.logoutStyle} id="logout">Logout</button>
             </li> 
             <li className="nav-link">
                     <HistoryButton />
             </li> 
+            {/* <li className="nav-link">
+                    <GoalsButton />
+            </li> */}
             <li className="nav-link">
                     <GridButton />
             </li>  
           </div>
             )} </div>) :(
               <li className="nav-link">
-                <button onClick={handleClick} style={styles.logoutStyle} id="logout">Home</button>
+                <button onClick={handleLogout} style={styles.logoutStyle} id="logout">Home</button>
             </li>              
             )}
     </ul>

@@ -3,6 +3,30 @@
     margin-left: 20px;
 }
 
+/*
+The following style gives a text color to the ratings so that they do not show up while recording data, but they do show up while printing.
+*/
+
+.fiveRow {
+    color: #C23B23
+}
+
+.fourRow {
+    color: #F39A27
+}
+
+.threeRow {
+    color: #EADA52
+}
+
+.twoRow {
+    color: limegreen
+}
+
+.oneRow {
+    color: green
+}
+
 /* 
 This tells us that each table, table header, table row, and table data cell will have no additional spacing.
 All of the elements inside will be exactly the widths that we assign later (plus borders).
@@ -101,6 +125,25 @@ Its width will automatically adjust to the table.
     height: 50px;
 }
 
+/* Bottom Goal Panel */
+.goalPanelRow {
+    height: 48px;
+    margin: 0 auto;
+    margin-top: 2px;
+    border-radius: 0 0 5px 5px;
+}
+
+.goalPanelSubCol {
+    margin: 0 auto;
+    line-height: 24px;
+    margin-top: 12px;
+}
+
+/*Special instructions for the button, which requires a different margin to be vertically centered*/
+.recordGoalButtonCol {
+    margin-top: 6px;
+}
+
 .nav-tabs { /* This represents the ul */
     max-width: 1030px;
     overflow: auto;
@@ -138,6 +181,20 @@ Its width will automatically adjust to the table.
 /* .fa-times:hover{
     visibility: visible !important;
 } */
+
+.fa-redo-alt {
+    display: inline-block;
+    transform: rotate(360deg);
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.fa-redo-alt:active {
+    transform: rotate(0deg);
+    transition: 0s;
+}
 
 .nav-student a:hover{
     color:white;
@@ -469,5 +526,30 @@ table {
 
     .add-button {
         margin-left: 5px;
+    }
+}
+
+@media print{
+    @page {size: landscape}
+    .goalPanelRow {
+        display: none;
+    }
+    .inactive-student-tab {
+        display: none;
+    }
+    .removeStudent {
+        display: none !important;
+    }
+    .add-button {
+        display: none;
+    }
+    .table-container{
+        width: 100%;
+    }
+    table {
+        width: 39px;
+    }
+    .nav-link {
+        color: black;
     }
 }

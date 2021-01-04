@@ -11,7 +11,7 @@ function GridCol({startTime, index, studentId, sortedLog, date}){
     var dd = String(today.getDate()).padStart(2, '0');
     var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
     var yyyy = today.getFullYear();
-    today = mm + dd + yyyy;
+    today = yyyy + mm + dd;
     let time = <Moment parse="HH:mm" format="h:mm" add={{ minutes: (15*index) }}>{startTime}</Moment>
     let tc = "tc";
 
@@ -84,11 +84,11 @@ function GridCol({startTime, index, studentId, sortedLog, date}){
                     <tr>
                         <td 
                             className="fiveRow" 
-                            style={{background: rating === 5 ? "#C23B23" : "inherit"}} 
+                            style={{background: rating === 5 ? "#C23B23" : "inherit"}}
                             data-value={5}
                             data-time={tc + index}
                             index={index}
-                            onClick={handleCellClick}>
+                            onClick={handleCellClick}>{rating === 5 ? "5" : " ‎"}
                         </td>
                     </tr>
                     <tr>
@@ -98,7 +98,7 @@ function GridCol({startTime, index, studentId, sortedLog, date}){
                             data-value={4}
                             data-time={tc + index}
                             index={index}
-                            onClick={handleCellClick}>
+                            onClick={handleCellClick}>{rating === 4 ? "4" : "‎ "}
                         </td>
                     </tr>
                     <tr>
@@ -108,7 +108,7 @@ function GridCol({startTime, index, studentId, sortedLog, date}){
                             data-value={3} 
                             data-time={tc + index}
                             index={index}
-                            onClick={handleCellClick}>
+                            onClick={handleCellClick}>{rating === 3 ? "3" : " ‎"}
                         </td>
                     </tr>
                     <tr>
@@ -118,7 +118,7 @@ function GridCol({startTime, index, studentId, sortedLog, date}){
                             data-value={2} 
                             data-time={tc + index}
                             index={index}
-                            onClick={handleCellClick}>
+                            onClick={handleCellClick}>{rating === 2 ? "2" : " ‎"}
                         </td>
                     </tr>
                     <tr>
@@ -128,7 +128,7 @@ function GridCol({startTime, index, studentId, sortedLog, date}){
                             data-value={1} 
                             data-time={tc + index}
                             index={index}
-                            onClick={handleCellClick}>
+                            onClick={handleCellClick}>{rating === 1 ? "1" : " ‎"}
                         </td>
                     </tr>
                 </tbody>
